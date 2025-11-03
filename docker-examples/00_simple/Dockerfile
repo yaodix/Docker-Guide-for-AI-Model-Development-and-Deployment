@@ -1,5 +1,9 @@
 # Use an official Python runtime as a parent image
-FROM python:3.8-slim
+FROM python:3.12-slim
+
+# 设置时区
+ENV TZ=Asia/Shanghai
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 # Set the working directory in the container
 WORKDIR /usr/src/app

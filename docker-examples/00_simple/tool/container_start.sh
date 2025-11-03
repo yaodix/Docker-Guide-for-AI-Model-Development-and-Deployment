@@ -1,11 +1,11 @@
 #!/bin/bash
 
-# 开发环境容器启动脚本
+# 开发环境容器启动脚本，如果没有 set -e，即使前面的命令失败，脚本也会继续执行，可能导致不可预期的结果。
 set -e
 
 # 配置默认值（开发环境优化）
 CONTAINER_NAME="dev_container"
-IMAGE_NAME="simple_demo:latest"
+IMAGE_NAME="simple_demo_py312:latest"
 WORKDIR="/workspace"
 HOST_PORT=3000
 CONTAINER_PORT=3000
