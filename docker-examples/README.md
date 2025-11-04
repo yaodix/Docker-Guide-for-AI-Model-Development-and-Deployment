@@ -158,3 +158,14 @@ You can modify the app.py script to change the face detection algorithm or apply
 ### 3. LLM inference API with vLLM+FastAPI+Docker
 
 **vllm_in_docker** provides a fast and easy way to deploy [vLLM](https://github.com/vllm-project/vllm) models such as `Qwen2.5-1.5B-Instruct` inside a Docker container with a REST API powered by FastAPI. This setup allows you to run local inference with GPU acceleration and interact with the model using HTTP endpoints.
+
+```
+project/
+│
+├── server.py            # Inference API server (FastAPI + vLLM)
+├── client.py            # Local testing script for the API
+├── Dockerfile           # Docker image definition
+├── requirements.txt     # Python dependencies
+└── models/
+    └── Qwen2.5-1.5B-Instruct/
+```

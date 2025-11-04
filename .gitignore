@@ -1,1 +1,5 @@
 .vscode
+# 排除任意文件夹里的__pycache__
+**/__pycache__/
+
+
